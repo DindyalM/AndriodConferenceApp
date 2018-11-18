@@ -1,11 +1,13 @@
 package com.example.dindyal_mursingh_assignment1;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.security.PrivateKey;
 
@@ -25,6 +27,11 @@ public class DashBoard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dash_board);
+        TextView name = (TextView) findViewById(R.id.textView6);
+        SharedPreferences sp = getSharedPreferences("key", 0);
+        String name2 = sp.getString("textvalue","error");
+
+        name.setText("welcome " + name2);
 
         button3 = (Button) findViewById(R.id.button3);
         button3.setOnClickListener(new View.OnClickListener() {
