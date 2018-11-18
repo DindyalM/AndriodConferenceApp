@@ -31,7 +31,7 @@ public class DashBoard extends AppCompatActivity {
         SharedPreferences sp = getSharedPreferences("key", 0);
         String name2 = sp.getString("textvalue","error");
 
-        name.setText("welcome " + name2);
+        name.setText("Welcome " + name2);
 
         button3 = (Button) findViewById(R.id.button3);
         button3.setOnClickListener(new View.OnClickListener() {
